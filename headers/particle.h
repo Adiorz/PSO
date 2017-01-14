@@ -10,9 +10,7 @@ template <class T> class Particle {
     std::vector<T> pbest;	// the best known position vector of the population
     float error;
     std::vector<T> best;	// the best position vector of the particle
-//    FitnessFunction fitnessFunction;
   public:
-//    Particle(FitnessFunction fitnessFunction, T position = T(), T velocity = T());
     Particle(const std::vector<T> &position = std::vector<T>(), const std::vector<T> &velocity = std::vector<T>());
     const std::vector<T> &getPositionVector() const;
     const std::vector<T> &getVelocityVector() const;
@@ -20,8 +18,6 @@ template <class T> class Particle {
     float getError();
     const std::vector<T> &getPBestVector() const;
 
-//    float calcError();
-//    void updateFitnessFunction(FitnessFunction fitnessFunc);
     void setVelocityVector(const std::vector<T> &velocity);
     void setPositionVector(const std::vector<T> &position);
     void setBestVector(const std::vector<T> &best);
